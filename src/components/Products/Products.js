@@ -1,4 +1,5 @@
 import React from 'react'
+import Product from '../Product/Product';
 
 const Products = ({ products }) => {
   console.log("products --> ", products);
@@ -6,7 +7,7 @@ const Products = ({ products }) => {
     <div>
       {products.map((product) => {
         return (
-          <h1>{product.name}</h1>
+          <Product product={product}/>
         )
       })}
     </div>
