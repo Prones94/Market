@@ -5,13 +5,14 @@ import './Product.css'
 
 const Product = ({ product, addProduct = () => { } }) => {
   return (
-    <Card className="product">
+    <Card className="card__custom">
       <CardActionArea>
         <CardMedia
           component="img"
           alt="{product.name}"
-          height="260"
-          className="product__image"
+          height="100px"
+          width="100px"
+          className="card__image"
           image={product.media.source}
           title={product.name}
         />

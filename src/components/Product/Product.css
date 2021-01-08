@@ -1,0 +1,71 @@
+.MuiCard-root.card__custom {
+  background-color: #121212;
+  color: #eeeeee;
+  transition: all 0.5s ease-in-out;
+}
+
+.MuiCard-root.card__custom:hover {
+  transform: scale(1.05)
+}
+
+.card__custom, .card__content {
+  padding-bottom: 0;
+}
+
+.card__custom p {
+  color: #eeeeee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__custom .card__price {
+  margin-top: 10px;
+  color: #03dac5;
+}
+
+.card__custom .card__button {
+  width: 100%;
+  color: #03dac5;
+}
+
+.card__custom .card__button:hover {
+  background-color: #03dac5;
+  color: #000000;
+}
+
+.card__custom .card__button svg {
+  margin-right: 10px;
+}
+
+.MuiCard-root.card__custom {
+  background-color: #21262d;
+  color: #c9d1d9;
+  transition: all 0.5s ease-in-out;
+}
+
+.MuiCard-root.card__custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 5px #03dac5;
+}
+
+.card__custom .card__content {
+  padding-bottom: 0;
+}
+
+.card__custom .card__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__custom .card__image {
+  padding: 10px 10px 0 10px;
+}
+
+.card__custom p {
+  color: #c9d1d9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

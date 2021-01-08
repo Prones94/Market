@@ -1,0 +1,31 @@
+.MuiAppBar-colorPrimary.navbar__custom {
+  background-color: #121212;
+}
+
+.MuiAppBar-colorPrimary.navbar__custom > div > div {
+  padding: 0;
+}
+
+.navbar__basket_wrapper {
+  display: flex;
+  flex-grow:1;
+  justify-content: flex-end;
+}
+
+.navbar__custom .navbar__title {
+  display: flex;
+}
+
+.navbar__custom .navbar__title .navbar__logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar__basket_wrapper .navbar__basket {
+  font-size: 45px;
+  color: #bb86fc;
+}
+
+.navbar__basket_wrapper strong {
+  color: #bb86fc;
+}
