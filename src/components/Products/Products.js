@@ -1,11 +1,13 @@
 import React from 'react'
 import Product from '../Product/Product';
 import { Grid, Container } from '@material-ui/core'
+import Banner from '../Banner/Banner';
 
 const Products = ({ products }) => {
   console.log("products --> ", products);
   return (
     <div>
+    <Banner />
       <Container id="products">
         <Grid container spacing={4}>
           {products.map((product, i) => {

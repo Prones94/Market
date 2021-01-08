@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Products from './components/Products/Products';
 import Navbar from './components/NavBar/Navbar';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Products products={products}/>
         </Route>
       </Switch>
+      <Footer />
     </div>
   </Router>
 }
