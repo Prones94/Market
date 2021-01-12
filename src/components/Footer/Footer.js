@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        All &copy; copyrights re reserved to Market Industries {current}
+        All &copy;copyrights are reserved to Market Industries {current}
       </p>
     </footer>
   )
