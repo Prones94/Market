@@ -7,14 +7,14 @@ const CheckoutForm = ({
   handleChange,
   handleSubmit,
   handleSelectChange
-}) => {
-  return (
+}) => (
+
     <form onSubmit={handleSubmit} autoComplete="off">
-      {/* <Grid container spacing={4}>
+      <Grid container spacing={4}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            fullWidth
+            fillWidth
             id="first-name"
             name="firstName"
             label="First Name"
@@ -24,11 +24,11 @@ const CheckoutForm = ({
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            required
+            requried
             fullWidth
             id="last-name"
             name="lastName"
-            label="First Name"
+            label="Last Name"
             value={user.lastName}
             onChange={handleChange}
           />
@@ -38,7 +38,6 @@ const CheckoutForm = ({
             required
             fullWidth
             id="email"
-            name="email"
             type="email"
             label="Email"
             value={user.email}
@@ -52,7 +51,7 @@ const CheckoutForm = ({
             id="address"
             name="address"
             value={user.address}
-            label="Address line 1"
+            label="Address"
             onChange={handleChange}
           />
         </Grid>
@@ -62,7 +61,7 @@ const CheckoutForm = ({
             fullWidth
             id="city"
             name="city"
-            label="City"
+            label="city"
             value={user.city}
             onChange={handleChange}
           />
@@ -71,24 +70,24 @@ const CheckoutForm = ({
           <TextField
             required
             fullWidth
-            id="post-code"
+            id="postal-code"
             name="postCode"
             value={user.postCode}
             onChange={handleChange}
-            label="Zip / Postal code"
+            label="ZIP/Postal Code"
           />
-        </Grid> */}
-
-        {/* <Grid item xs={12} sm={6}>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth>
             <InputLabel id="shipping-country-select-label">
               Shipping Country
-          </InputLabel>
+            </InputLabel>
             <Select
               required
               name="shippingCountry"
               id="shipping-country-select"
-              value={user.shippingCountry.code || ""}
+              // value={user.shippingCountry.code || ""}
+              value=""
               labelId="shipping-country-select-label"
               onChange={(e) => handleSelectChange(e, "shippingCountries")}
             >
@@ -99,53 +98,53 @@ const CheckoutForm = ({
               ))}
             </Select>
           </FormControl>
-        </Grid> */}
-
-        {/* <Grid item xs={12} sm={6}>
-          <FormControl fullWidth>
-            <InputLabel id="shipping-subdivision-select-label">
-              Shipping Subdivision
-          </InputLabel>
-            <Select
-              required
-              name="shippingSubdivision"
-              id="shipping-subdivision-select"
-              labelId="shipping-subdivision-select-label"
-              value={user.shippingSubdivision.code || ""}
-              onChange={(e) => handleSelectChange(e, "shippingSubdivisions")}
-            >
-              {user.shippingSubdivisions.map((subdivision) => (
-                <MenuItem key={subdivision.code} value={subdivision.code}>
-                  {subdivision.name}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid> */}
-
-        {/* <Grid item xs={12} sm={6}>
-          <FormControl fullWidth>
+        </Grid>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <FormControl fullWidth>
+          <InputLabel id="shipping-subdivision-select-label">
+            Shipping Subdivisions
+              </InputLabel>
+          <Select
+            required
+            name="shippingSubdivision"
+            id="shipping-subdivison-select"
+            labelId="shipping-subdivision-select-label"
+            value=""
+            //value={user.shippingSubdivisons.code || ""}
+            onChange={e => handleSelectChange(e, "shippingSubdivisions")}
+          >
+            {user.shippingSubdivisions.map((subdivision) => (
+              <MenuItem key={subdivision.code} value={subdivision.code}>
+                {subdivision.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <FormControl fullWidth>
             <InputLabel id="shipping-options-select-label">
               Shipping Options
-          </InputLabel>
+            </InputLabel>
             <Select
               required
               name="shippingOptions"
-              value={user.shippingOption.id}
+              value=""
+              // value={user.shippingOption.id}
               id="shipping-options-select"
               labelId="shipping-options-select-label"
-              onChange={(e) => handleSelectChange(e, "shippingOptions")}
-            >
-              {user.shippingOptions.map((option) => (
+              onChange={e => handleSelectChange(e, "shippingOptions")}
+             >
+             {console.log('User------------------->', user)}
+              {/* {user.shippingOptions.map((option) =>(
                 <MenuItem key={option.id} value={option.id}>
                   {`${option.description} - (${option.price.formatted_with_symbol})`}
                 </MenuItem>
-              ))}
+              ))} */}
             </Select>
-          </FormControl>
-        </Grid>
-      </Grid> */}
-
+        </FormControl>
+      </Grid>
       <div className="actions">
         <Button size="medium" to="/basket" component={Link} variant="contained">
           Go Back
@@ -154,9 +153,7 @@ const CheckoutForm = ({
           Next
       </Button>
       </div>
-
     </form>
   )
-}
 
 export default CheckoutForm
